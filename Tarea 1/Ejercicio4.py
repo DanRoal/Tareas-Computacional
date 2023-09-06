@@ -8,4 +8,4 @@ interes = float(input("introduzca la tasa de interes como porcentaje:"))
 anos = int(input("Por favor introduzca cuantos años va a dejar su dinero"))
 
 for i in range(1,anos+1):
-    print((inversionInicial + (interes)/100)**i)
+    print(inversionInicial * (1 + (interes)/100)**i)
