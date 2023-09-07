@@ -1,6 +1,9 @@
+"""
+Escribir un programa que almacene la cadena de caracteres en una variable,
+pregunte al usuario por la contraseña hasta que ingrese la contraseña correcta
+"""
 
-
-contrasena = "holacrayola"
+contrasena = "contraseña"
 
 while True:
     intento = input('introduzca la contraseña:\n')
@@ -10,5 +13,4 @@ while True:
     elif intento=='exit':
         break
     else:
-        print("esa no es la contraseña, intenta de nuevo o escribe exit para dejar de intentar")
-
+        print("Esa no es la contraseña, intenta de nuevo o escribe exit para dejar de intentar")
