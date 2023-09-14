@@ -7,8 +7,8 @@ for i in range(1,11):
     lista.append(i)
 cuenta= ''
 for i in range(1,11):
-    if lista[-i]==lista[0]: 
-        cuenta = cuenta + f"{lista[0]}"
-    cuenta = cuenta + f"{lista[-i]}, "
+    if lista[-i]!=lista[0]: 
+        cuenta = cuenta + f"{lista[-i]}, "
+    else : cuenta = cuenta + f"{lista[0]}"
 
 print(cuenta)
