@@ -16,4 +16,9 @@ def productMat(MatrizA, MatrizB):
 A = [[1,2,3], [4,5,6]]
 B = [[1,-1],[0,1],[-1,1]]
 
+C= [[1,3,6],[9,3,-2],[-1,0,4]]
+D= [[2,-1,-3],[4,2,1],[0,3,1]]
+
 print(productMat(A,B))
+
+print(productMat(C,D))
