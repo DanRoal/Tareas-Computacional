@@ -11,21 +11,21 @@ import sympy as s
 
 x,y,z = s.symbols('x y z')
 
-def bisec(funcion, variable, min, max):         #Declaramos una función que coma la funcion de la que se quiere encontrar la raíz
-                                                #Asumimos que la función evaluada en los puntos min y max, tiene signos distintos. 
+def bisec(funcion, variable, minimo, maximo):         #Declaramos una función que coma la funcion de la que se quiere encontrar la raíz
+                                                #Asumimos que la función evaluada en los puntos minimo y maximo, tiene signos distintos. 
     fun = s.lambdify(variable, funcion)
-    mitad = (min+max)/2
+    mitad = (minimo+maximo)/2
     evalmitad = fun(mitad)
-    if abs(max-min) <= 1e-6:
+    if abs(maximo-minimo) <= 1e-6:
         print(f"La raíz aproximada es {mitad} y su evaluación en la función es {evalmitad}")
     else:
-        evalmin = fun(min)
-        evalmax = fun(max)
+        evalmin = fun(minimo)
+        evalmax = fun(maximo)
 
         if s.sign(evalmitad) != s.sign(evalmin):
             bisec(funcion, variable, min, mitad)
         elif s.sign(evalmitad) != s.sign(evalmax):
-            bisec(funcion, variable, mitad, max)
+            bisec(funcion, variable, mitad, maximo)
 
 f = x**3 - 5* x**2 + 7
 
