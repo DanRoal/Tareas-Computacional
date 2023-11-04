@@ -46,10 +46,10 @@ def integral(f, estiramiento):
 
 # Calculamos la integral
 tic = time.time()
-inte = integral(f, 1000)
+inte = integral(f, 10)
 toc = time.time()
 
-print("La integral de la función f(x) = e^(-x^2) en el intervalo [-1000, 1000] es: ", inte*2)
+print("La integral de la función f(x) = e^(-x^2) en el intervalo [-10, 10] es: ", inte*2)
 print("El valor exacto de la integral es: ", np.sqrt(np.pi))
 print("El error absoluto es: ", abs(inte*2 - np.sqrt(np.pi)))
 print("El tiempo de ejecución fue: ", toc-tic, " segundos")
